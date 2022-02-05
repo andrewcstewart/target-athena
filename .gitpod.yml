@@ -6,9 +6,11 @@ image:
 
 tasks:
   - name: mothena
+    # init: 
+    command: docker-compose -f .gitpod/mothena.docker-file.yaml up
+  - name: meltano
     init: |
-      docker-compose -f mothena.docker-file.yaml up
-    # init: pip install -r requirements.txt
+      meltano install
 
 ports:
   - port: 5000
