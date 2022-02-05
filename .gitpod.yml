@@ -10,6 +10,7 @@ tasks:
     command: docker-compose -f .gitpod/mothena.docker-file.yaml up
   - name: meltano
     init: |
+      poetry install
       meltano install
 
 ports:

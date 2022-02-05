@@ -1,9 +1,9 @@
 FROM gitpod/workspace-full 
 
 RUN pip install poetry
-RUN poetry install
+# RUN poetry install
 RUN pip install meltano
-RUN meltano install
+# RUN meltano install
 
 ENV PYTHONUSERBASE=/workspace/.pip-modules
 ENV PATH=$PYTHONUSERBASE/bin:$PATH
